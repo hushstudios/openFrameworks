@@ -35,7 +35,15 @@ void ofxSVG::load(std::string path){
 
 	ofBuffer buffer = ofBufferFromFile(path);
 	
-	loadFromString(buffer.getText(), path);
+	string stringdata = buffer.getText();
+	fixSvgString(stringdata);
+	if (stringdata == "") {
+		ofLogError("ofxSVG::loadFromString") << "XML string data for " << path << " is null! Skipping setup";
+		return;
+	}
+	else {
+		loadFromString(buffer.getText(), path);
+	}
 	
 }
 
