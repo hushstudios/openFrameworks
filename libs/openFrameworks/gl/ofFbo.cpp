@@ -843,7 +843,8 @@ void ofFbo::begin(bool setupScreen) const{
 }
 
 
-void ofFbo::begin(ofFboMode mode){
+void ofFbo::begin(ofFboMode mode) const
+{
     auto renderer = settings.renderer.lock();
     if(renderer){
         renderer->begin(*this, mode);
