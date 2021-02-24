@@ -49,13 +49,16 @@ void			debugMessageCallback(GLenum /*source*/, GLenum /*type*/, GLuint /*id*/, G
 {
 	switch( severity ) {
 		case GL_DEBUG_SEVERITY_HIGH:
-			ofLogError("ofAppGLFWWindow") << message;
+			//ofLogError("ofAppGLFWWindow") << message;
+			std::cout << "OpenGL Error: " << message << std::endl;
 		break;
 		case GL_DEBUG_SEVERITY_MEDIUM:
-			ofLogWarning("ofAppGLFWWindow") << message;
+			//ofLogWarning("ofAppGLFWWindow") << message;
+            std::cout << "OpenGL Warning: " << message << std::endl;
 		break;
 		case GL_DEBUG_SEVERITY_LOW:
-			ofLogNotice("ofAppGLFWWindow") << message;
+			//ofLogNotice("ofAppGLFWWindow") << message;
+			std::cout << "OpenGL Notice: " << message << std::endl;
 		break;
 		case GL_DEBUG_SEVERITY_NOTIFICATION:
 		break;
