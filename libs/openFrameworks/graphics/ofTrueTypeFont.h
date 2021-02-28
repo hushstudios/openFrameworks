@@ -131,6 +131,7 @@ struct ofTrueTypeFontSettings{
     bool                      contours = false;
     float                     simplifyAmt = 0.3f;
     int                       dpi = 0;
+	int                       border = 1;
     ofTrueTypeFontDirection direction = OF_TTF_LEFT_TO_RIGHT;
     std::vector<ofUnicode::range> ranges;
 

@@ -721,7 +721,7 @@ bool ofTrueTypeFont::load(const ofTrueTypeFontSettings & _settings){
 	if(settings.ranges.empty()){
 		settings.ranges.push_back(ofUnicode::Latin1Supplement);
 	}
-	int border = 1;
+	int border = settings.border;
 
 
 	FT_Set_Char_Size( face.get(), settings.fontSize << 6, settings.fontSize << 6, settings.dpi, settings.dpi);
