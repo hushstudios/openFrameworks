@@ -13,7 +13,7 @@ $libsDir = $scriptPath + "\..\..\libs"
 
 function DownloadPackage{
     $pkg = $args[0]
-    $url = "http://ci.openframeworks.cc/libs/$pkg"
+    $url = "http://ci.openframeworks.cc/libs/0.11.0/$pkg"
     If(Test-Path "$pkg") {
         echo "Deleting old package"
         Remove-Item $pkg
